@@ -1,0 +1,65 @@
+Inheritance
+  -	is-a relationship.
+  -	Everything extends Object
+    o	The Object class is the parent of every class in Java- it is at the root of the class hierarchy.
+  -	Terminology
+    o	Parent class:
+      	Also referred to as superclass or base class
+      	When classes extend a parent class, they inherit the properties and behaviors of the parent class
+    o	Child class:
+      	Also referred to as the subclass, extended class, or derived class
+      	This class inherits the properties and behaviors of the base class when it extends the base class.
+      	This class can add properties and behaviors to those of the base class.
+      	This class can overried properties and behaviors of the base class.
+
+  -	Inheritance
+    o	Method Overriding
+      	When you overload a method, it must have a unique signature.
+      	When you override a method in a child class, it must have the same signature as the corresponding method in the parent class.
+    o	Constructors
+      	The case class constructor can be invoked in a derived class by calling super().
+      	You can only call super() from within the constructor of the derived class, nowhere else.
+      	The call to super() must be the first statement in the constructor
+      	The call to super mush match the signature of a valid constructor in the base class.
+      	If you do not explicitly call super in the constructor or a derived class, the compiler will automatically call the base class default constructor.
+      	If your derived class does not define a constructor, the compiler provides the derived class with a default constructor that does nothing but call super, 
+        invloing the default constructor of the base class.
+  
+  -	Polymorphism
+    o	Derived types behave the same as base type. They can be used wherever the associated base type could be used.
+    o	Same as interface, the object can use only the method that are reference by eventhough the it was created on the heap as derived class.
+    o	Subclass can be treated as if they are superclass.
+    o	Derived types behave the same as their base types.
+    o	Use == to compare the reference address.
+  
+  -	Calling Methods Polymorphically
+    o	If you have an instance of base class pointed to by an based reference, the base class’version of method is called
+    o	If you have an instance of derived class that has not overriden the base version’s method and is pointed to by a derived class reference, 
+    the base class’s method is called
+    o	If you have an instance of derived class but it is pointed to by an base class’s reference the base class’s version of method.
+    o	If you have an instance of derived class that has overriden the base class’s version of method and is pointed to by a derived reference, 
+    the derived class’s version of method is called
+    o	IF you have an instance of derived class that has overriden the base class’s version of method and is pointed to by an base reference, 
+    the derived class’s version of method is called
+  
+  -	Abstract Base class
+    o	Properties
+      	Like an interface, an abstract class cannot be instantiated – only subclasses of an abstract class can be instantiated
+      	Like an interface, an abstract base class can define methods (definition only – no implementation) and then force subclasses to provide an implementation.
+      	Like a regular base class, an abstract base class provide fully-implemented methods that get inherited by child classes
+      	Like a regular base class, an abstrct base class can contain field that get inherited by child classes.
+    o	Allows to create classes that implement code common to potential subclasses, force subclasses to have certain behaviors, and force subclasses to 
+    provide their own implementations of those behaviors.
+    o	Use abstract keyword.
+
+  -	Java does not allow multi-inheritance.
+  -	Derived class get inherites all of the methods and fields except private field properties and default method.
+  -	Cannot throws new exceptions.
+  -	Final
+    o	final class – cannot be inherited by other classes. (ex. String class)
+    o	final method – cannot be overrided from derived class
+  -	Casting – When casting from parent class to child class, must use Explicit Conversion.
+    o	Can only be converted when the object type is pararent class but instanciated as child class.
+    o	Use instanceof method to check which object is in which class of instance.
+      	parent instance of child  = is parent object type instanciated as child class?
+    o	When casting from child class to parent class, compiler automatically convert for programmer
