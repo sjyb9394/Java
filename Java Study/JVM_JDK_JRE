@@ -1,0 +1,31 @@
+Java Components: JVM, JRE and JDK.
+
+1)	JVM
+  •	WORA (write once, run anywhere)
+  •	The JVM is essentially a virtual computer that includes its own instruction set and memory. It works as a layer between Java bytecode and the machine’s operating system to interpret the bytecode into instructions that computer’s CPU can read and execute.
+  •	Uses three components:
+    i.	Class loaders:
+      o	Gather all necessary and supporting bytecode in a .class file needed to execute a Java program and during runtime, they dynamically serve the required bytecode to the JVM.
+    ii.	Byte Code Verifier
+      o	A safety measure implemented in the Java language to improve security. 
+      o	When class loaders load bytecode into the JVM, the byte code verifier will check any code not associated with system classes to be certain that the code is safe to execute.
+    iii.	Interpreter
+      o	Because JVM includes a just-in-time (JIT) compiler that converts the bytecode into machine code on the fly, one line at a time, the CPU reads and executes the code each instruction immediately after a computer reads it.
+      o	Convert the verified bytecode into machine code that can be executed on the underlying hardware.
+
+
+2)	JRE
+  •	Includes the minimum tools required to run a Java program.
+  •	JRE includes the JVM as well as core classes and libraries required to run Java programs.
+  •	Reads only bytecode.
+
+
+3)	JDK
+  •	Includes several tools for developing Java applications that are not included in the JRE including:
+    i.	A compiler: used to convert Java code into bytecode.
+    ii.	Debugger: helps identify errors in the code
+    iii.	Archiver: used to package a Java program into a distribution JAR file.
+    iv.	Documentation Generator (Javadoc): Used to add common documentation comments to your code files
+  •	JDK includes the JRE and JVM.
+  •	OpenJDK: Open source reference inplementation of the Java Development Kit.
+  •	Oracle JDK: Commercial implementation released uner the Oracle Binary Code License Agreement. Has few more classes, but needs license.
