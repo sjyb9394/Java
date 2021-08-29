@@ -1,0 +1,33 @@
+Nested Class and Nested Inheritance
+  -	Nested Class
+    o	Member class – Class that is declared inside the class
+      	Instance Member class
+        •	class that is declared without static keyword
+    o	Can declare instance field, and method
+    o	Cannot declare static field or methods
+      	Static member class
+        •	Class that is declared with static keyword
+    o	Can declare all of properties of fields and methods
+    o	Local Class – Class that is declared insdie the method
+      	Cannot use pulbic, private or static
+      	Can only be used inside the method.
+    o	When using outsie class’s method from inside class, use Outsider.this.field/method
+  -	Nested Interface
+    o	Interface inside a class
+    o	Can have only public and default access specifiers when declared outside any other class.
+  -	Anonymous Inner class
+    o	Inner class without a name and for which only a single object is created. Can be useful when making an instance of an object with certain “extras” such as overloading methods of a class or interface, without having to actually subclass a class.
+    o	Useful in writing implementation classes for listener interfaces in graphics programming.
+      	3 ways to use it
+        •	(In field)
+        •	Person field = new Person(){
+              void work(){System.out.println(“…”);
+              #Override
+              void wake(){
+                System.out.println(“…”);
+                work();
+              }
+           };
+        •	Create in local method
+        •	Give as a parameter.
+    o	Can be used similar way to interface as well, except the programmer have to implement all abstract method when declaring anonymous class.
