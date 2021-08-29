@@ -1,0 +1,34 @@
+Interface
+  -	A user-defined type, just like classes and enum, but is never instantiated.
+  -	Interface is defined set of methods that provide standard behaviors that any type that implements the interface must provide.
+  -	Use implements keyword to implements interface
+  -	@override symbol is an annotation (metadata), which indicates that the methods in our class were defined in the interface and this class is providing an implementation
+  -	Restrictions
+    o	Interfaces cannot have member fields except constants
+    o	None of the methods can have implementation. From java 8, interfaces are allowed to have default implementations of methods.
+  -	To implements multiple interfaces, simple decalr implements and write interfaces along the way separated by comma.
+  -	Extending an interface
+    o	When you want to define an interface that has same capabilities as an existing interface but with one or more additional methods, use extends keyword. This ne interface declares that it extends existing interface and then defines only its new methods.
+  -	Polymorphism
+    o	Means “many-formed” and the key idea is that an object can take more than one form. Objects can be treated polymorphically when they implement an interface or when they use inheriance to extend another class.
+    o	We only have access to the methods that are defiend in the interface you choose.
+    o	Each complete instantiated object is created on the heap. The difference is that we refer to the newly created object with different reference types.
+    o	A class that implements an interface may be treated as an instance of the interface type
+    o	A child interface may be treated as if it is an instance of its parent interface.
+  -	Any class that implemetns the child interface must provide implementations of all methods declared in both the parent and the child interfaces or be marked abstract
+
+Fields
+  -	Constant Field – Final values
+  -	Abstract Method – Methods cannot be implemented in interface class (Compiler will automatically put abstract keyword on all methods except default and static methods)
+  -	Default Method – From Java 8, you can implement methods using default keywords
+  -	Static method – From Java 8, can be use static keywords for method
+
+Anonymous Class
+  o	From Java 8, Lambda can be used with anonymous class.
+    	Interface name = new interface(){
+      //implement the abstract methods that were declared in interface
+        }
+  -	Can use multi-implements interface
+    o	Child class must implement all methods or leave as abstract method.
+  -	Can use array to store many interfaces.
+  -	Use instanceof to check for if the object is instanciated with which class.
